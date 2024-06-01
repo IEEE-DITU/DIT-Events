@@ -8,13 +8,6 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title:
-          Text('DIT EVENTS'),
-          centerTitle: true,
-          backgroundColor: Colors.blue,
-        ),
-        body: ClubList());
+    return Scaffold(    );
   }
 }
