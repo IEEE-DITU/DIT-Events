@@ -35,14 +35,12 @@ class ClubList extends StatelessWidget {
                 itemCount: imageList.length,
                 itemBuilder: (context, index) {
                   return GestureDetector(onTap:  (){}, child:
-                    Card(
-                        color: Colors.white,
-                      child:SizedBox(
-                        height:110,
-                        width: 110,
-                        child:
-                    Image.asset(imageList[index], width: 100, height: 100,),
-                      ),),);
+                    SizedBox(
+                      height:110,
+                      width: 130,
+                      child:
+                                        Image.asset(imageList[index], width: 100, height: 100,),
+                    ),);
                     },
               ),
       ),
