@@ -1,4 +1,5 @@
 import 'package:dit_events/custom_widgets/club_list.dart';
+import 'package:dit_events/custom_widgets/event_list.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -35,6 +36,7 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
                 child: Text('UPCOMING EVENTS',style:GoogleFonts.inriaSerif(fontWeight:FontWeight.w400,fontSize:25),),
               ),
+              SizedBox(height: 250,child: EventList()),
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
                 child: Text('CLUBS & SOCIETIES',style:GoogleFonts.inriaSerif(fontWeight:FontWeight.w400,fontSize:25),),
