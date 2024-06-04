@@ -5,28 +5,28 @@ class divider extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        DividerWidget(
-        ),
+        DividerWidget(),
         SphereContainer(),
       ],
     );
   }
 }
 class SphereContainer extends StatelessWidget {
+  final String or='OR';
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 30.0,
       height: 30.0,
-      decoration: BoxDecoration(
-        color: Colors.grey,
-        shape: BoxShape.circle,
+      decoration: const BoxDecoration(
+        color: Color.fromRGBO(217, 217, 217, 1),
+        shape:  BoxShape.circle,
       ),
       child: Center(
-        child: Text(
-          'OR',
-          style: TextStyle(
-            color: Colors.white,
+        child:  Text(
+           or,
+          style:  const TextStyle(
+            color: Color.fromRGBO(140, 138, 138, 1),
             fontSize: 12.0,  // Adjust font size to fit in the smaller container
             fontWeight: FontWeight.bold,
           ),
@@ -41,9 +41,8 @@ class DividerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 2.0,
-      width: 200.0, // Adjust the width as needed
-      color: Colors.grey,
-
+      width: 357.0, // Adjust the width as needed
+      color: const Color.fromRGBO(217, 217, 217, 1),
     );
   }
 }
