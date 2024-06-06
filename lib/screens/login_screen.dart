@@ -1,3 +1,4 @@
+import 'package:dit_events/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:dit_events/custom_widgets/divider.dart';
 import 'package:dit_events/custom_widgets/button2.dart';
@@ -17,60 +18,61 @@ class _Login_screenState extends State<Login_screen> {
   final String pass="Password";
   final String text1="Don't have an account? ";
   final String text2=" Sign Up!";
+  final String text3="Continue as Guest";
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
       body:  Center(
+        child: Padding(
+          padding:const  EdgeInsets.only(left:32,right:32),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               _logo(),
+
+              //welcome text
               const SizedBox(height: 25),
-          //welcome text
           Text(
             wel,
             textAlign: TextAlign.center,
             style: const TextStyle(
                 fontFamily: 'Inter',
                 fontSize:24,
-                color: Color.fromRGBO(0, 0, 0, 1),
+                color: CustomColors.btn1_txtColor,
                 fontWeight:FontWeight.w400
             ),
           ),
-              const SizedBox(height: 20),
+
               //input field via e mail
-              Container(
-                margin: const EdgeInsets.only(left: 32,right: 32),
-                child : inputfield_widget(mail,false),
-              ),
               const SizedBox(height: 20),
+              inputfield_widget(mail,false,CustomColors.greyColor1),
+
               //input field via password
-              Container(
-                margin: const EdgeInsets.only(left: 32,right: 32),
-                child:   inputfield_widget(pass,true),
-              ),
               const SizedBox(height: 20),
+              inputfield_widget(pass,true,CustomColors.greyColor1),
+
               // button 1 (login button)
-              Container(
-                margin: const EdgeInsets.only(left: 32,right: 32),
-                child:const  LoginBtn(null),
-              ),
               const SizedBox(height: 20),
-            // OR divider
-            Container(
-            margin: const EdgeInsets.only(left: 32,right: 32),
-             child:divider(),
-              ),
+              button(login,()
+              {
+                  print('login!!!');
+                }
+                ),
+
+              // OR divider
               const SizedBox(height: 20),
+               divider(),
+
               // button 2(guest button)
-              Container(
-                margin: const EdgeInsets.only(left: 32,right: 32),
-                  child:const  Guest(null),
-                // {
-                  //   print('Continue as guest button pressed!');
-                  // })
-              ),
+              const SizedBox(height: 20),
+                Guest(()
+                {
+                print('Continue as guest button pressed!');
+                },
+                    text3
+                ),
+
               // to show and print text of sign up and account
               Container(height: 25),
               Row(
@@ -82,7 +84,7 @@ class _Login_screenState extends State<Login_screen> {
                 style: const TextStyle(
                     fontFamily: 'Inter',
                     fontSize:17,
-                    color: Color.fromRGBO(140, 138, 138, 1),
+                    color: CustomColors.greyColor2,
                     fontWeight:FontWeight.w400
                 ),
               ),
@@ -93,7 +95,7 @@ class _Login_screenState extends State<Login_screen> {
                   (
                     fontFamily: 'Inter',
                     fontSize:17,
-                    color: Color.fromRGBO(2, 148, 219, 1),
+                    color: CustomColors.blueColor1,
                     fontWeight:FontWeight.w700
                 ),
               )
@@ -101,6 +103,7 @@ class _Login_screenState extends State<Login_screen> {
               ),
             ],
         ),
+      ),
       ),
     );
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 class Guest extends StatelessWidget {
-  final String gmess='Continue as a Guest';
+  final String gmess;
   final VoidCallback? callback;
-  const Guest(this.callback);
+  const Guest(this.callback,this.gmess);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class Guest extends StatelessWidget {
         width: double.infinity,
         child: Text(gmess,
           style: const TextStyle(
-            fontFamily: 'Inter',
+            fontFamily:  'Inter',
             color: Color.fromRGBO(26, 26, 26, 1),
             fontSize: 17.0, // Optional: Change the font size
           ),
