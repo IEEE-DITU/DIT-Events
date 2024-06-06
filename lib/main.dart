@@ -1,6 +1,4 @@
 import 'package:dit_events/screens/naa_screen.dart';
-import 'package:dit_events/screens/splash_screen.dart';
-import 'package:dit_events/utils/widget_extension.dart';
 import 'package:flutter/material.dart';
 
 void main() {
