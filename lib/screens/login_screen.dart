@@ -88,19 +88,24 @@ class _Login_screenState extends State<Login_screen> {
                     fontWeight:FontWeight.w400
                 ),
               ),
-                 Text(
+                 TextButton(onPressed: ()
+                 {
+                   print("log in");
+                 },
+                   child: Text(
                  text2,
-                textAlign: TextAlign.center,
-                style:  const TextStyle
+                  textAlign: TextAlign.center,
+                  style:  const TextStyle
                   (
                     fontFamily: 'Inter',
                     fontSize:17,
                     color: CustomColors.blueColor1,
                     fontWeight:FontWeight.w700
-                ),
+                  ),
               )
-          ],
-              ),
+                 ),
+            ],
+                 ),
             ],
         ),
       ),
