@@ -1,4 +1,4 @@
-import 'package:dit_events/screens/naa_screen.dart';
+import 'package:dit_events/screens/landing_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: NewsScreen(),
+      debugShowCheckedModeBanner: false,
+      home: LandingScreen(),
     );
   }
 }
