@@ -8,8 +8,9 @@ class EventList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      scrollDirection: Axis.horizontal,shrinkWrap: true,
-      children: [
+      scrollDirection: Axis.horizontal,
+      shrinkWrap: true,
+      children: const [
         EventCard(
           eventName: 'fristevent',
           date: '12/5/24',
