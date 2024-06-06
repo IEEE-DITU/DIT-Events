@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: NewsAlertsScreen(),
+    );
+  }
+}
+
+class NewsAlertsScreen extends StatelessWidget {
+  final List<Map<String, String>> newsAlerts = [
+    {'date': '2024-06-01', 'title': 'News Headline 1', 'description': 'Description of news 1'},
+    {'date': '2024-06-02', 'title': 'Alert: Update Required', 'description': 'Description of alert'},
+    {'date': '2024-06-03', 'title': 'News Headline 2', 'description': 'Description of news 2'},
+    // Add more news and alerts here
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('News & Alerts'),
+      ),
+      body: ListView.builder(
+        itemCount: newsAlerts.length,
+        itemBuilder: (context, index) {
+          final item = newsAlerts[index];
+          return Card(
+            child: ListTile(
+              title: Text(item['title']!),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Date: ${item['date']}'),
+                  SizedBox(height: 5),
+                  Text(item['description']!),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
