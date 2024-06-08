@@ -19,7 +19,7 @@ class EventScreen extends StatelessWidget {
             'Assets/photo1.png',
             'Assets/photo1.png',
           ],
-          eventName: 'Name',
+          eventName:[ 'Name', 'name3','name4','name5','name6']
         ),
         const EventPageCards(
           categoryName: 'PAST EVENTS',
@@ -28,7 +28,7 @@ class EventScreen extends StatelessWidget {
             'Assets/photo1.png',
             'Assets/photo1.png',
           ],
-          eventName: 'Name 2',
+          eventName: ['Name 2','name7','name8',]
         ),
       ],
     );

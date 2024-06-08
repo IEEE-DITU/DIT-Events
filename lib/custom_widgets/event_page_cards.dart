@@ -8,7 +8,7 @@ class EventPageCards extends StatelessWidget {
       required this.imageList,
       required this.eventName});
   final String categoryName;
-  final String eventName;
+  final List<String> eventName;
   final List<String> imageList;
   @override
   Widget build(BuildContext context) {
@@ -22,19 +22,21 @@ class EventPageCards extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
             child: Row(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  //crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Title(
-                        color: Colors.black,
-                        child: Text(
-                          categoryName,
-                          style: GoogleFonts.inriaSerif(
-                              fontWeight: FontWeight.w400, fontSize: 18),
-                        )),
-                    Icon(Icons.filter_list, color: Colors.grey, size: 20.0),
-                  ],
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Title(
+                          color: Colors.black,
+                          child: Text(
+                            categoryName,
+                            style: GoogleFonts.inriaSerif(
+                                fontWeight: FontWeight.w400, fontSize: 18),
+                          )),
+                      Icon(Icons.filter_list, color: Colors.grey, size: 32.0),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -42,7 +44,7 @@ class EventPageCards extends StatelessWidget {
           Container(
             child: SizedBox(
               width: 400,
-              height: 150,
+              height: 300,
               child: ListView.builder(
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),
@@ -54,20 +56,26 @@ class EventPageCards extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(
-                          height: 100,
-                          width: 150,
-                          child: Image.asset(
-                            imageList[index],
-                            width: 150,
-                            height: 150,
+                          height: 290,
+                          width: 250,
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                imageList[index],
+                                width: 200,
+                                height: 260,
+                              ),
+                              Title(
+                                  color: Colors.black,
+                                  child: Text(
+                                    eventName[index],
+                                    style: GoogleFonts.inriaSerif(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 20),
+                                  ))
+                            ],
                           ),
                         ),
-                        Title(color: Colors.black,
-                            child: Text(
-                              eventName,
-                              style: GoogleFonts.inriaSerif(
-                                  fontWeight: FontWeight.w400, fontSize: 18),
-                            ))
                       ],
                     ),
                   );
