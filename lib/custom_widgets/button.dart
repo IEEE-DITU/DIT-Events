@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 class button extends StatelessWidget {
   final String txt;
   final VoidCallback? callback;
@@ -12,8 +13,7 @@ class button extends StatelessWidget {
       child:  SizedBox(
         width: double.infinity,
         child: Text(txt,
-          style: const TextStyle(
-            fontFamily: 'Inter',
+          style: GoogleFonts.inter(
             fontSize: 20,
             color: Color.fromRGBO(0, 0, 0, 1),
           ),

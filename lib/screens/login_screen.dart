@@ -1,9 +1,11 @@
+import 'package:dit_events/screens/Signup_screen.dart';
 import 'package:dit_events/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:dit_events/custom_widgets/divider.dart';
 import 'package:dit_events/custom_widgets/button2.dart';
 import '../custom_widgets/inputfield_widget.dart';
 import '../custom_widgets/button.dart';
+import 'package:google_fonts/google_fonts.dart';
 class Login_screen extends StatefulWidget {
   const Login_screen({super.key});
   static const routeName = '/login-screen';
@@ -36,12 +38,12 @@ class _Login_screenState extends State<Login_screen> {
           Text(
             wel,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-                fontFamily: 'Inter',
+            style: GoogleFonts.inter
+              (
                 fontSize:24,
                 color: CustomColors.btn1_txtColor,
                 fontWeight:FontWeight.w400
-            ),
+            )
           ),
 
               //input field via e mail
@@ -81,8 +83,7 @@ class _Login_screenState extends State<Login_screen> {
               Text(
                 text1,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                    fontFamily: 'Inter',
+                style: GoogleFonts.inter(
                     fontSize:17,
                     color: CustomColors.greyColor2,
                     fontWeight:FontWeight.w400
@@ -90,14 +91,12 @@ class _Login_screenState extends State<Login_screen> {
               ),
                  TextButton(onPressed: ()
                  {
-                   print("log in");
+                   Navigator.pushNamed(context, Signup_screen.routeName);
                  },
                    child: Text(
                  text2,
                   textAlign: TextAlign.center,
-                  style:  const TextStyle
-                  (
-                    fontFamily: 'Inter',
+                  style:  GoogleFonts.inter(
                     fontSize:17,
                     color: CustomColors.blueColor1,
                     fontWeight:FontWeight.w700

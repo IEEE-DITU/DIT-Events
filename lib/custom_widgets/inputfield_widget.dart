@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 class inputfield_widget extends StatelessWidget {
    final bool ispassword;
   final String hintText;
@@ -17,9 +18,12 @@ class inputfield_widget extends StatelessWidget {
             borderSide: const BorderSide(color: Color.fromRGBO(140, 138, 138,1),width: 1),
         ),
         hintText: hintText,
-        hintStyle: const TextStyle(
-            fontFamily: 'Inter',
+        hintStyle:GoogleFonts.inter
+         (
+           textStyle:const TextStyle
+        (
             color: Color.fromRGBO(140, 138, 138,1),
+        ),
         ),
       ),
       obscureText: ispassword,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 class Guest extends StatelessWidget {
   final String gmess;
   final VoidCallback? callback;
@@ -22,10 +23,11 @@ class Guest extends StatelessWidget {
       child:  SizedBox(
         width: double.infinity,
         child: Text(gmess,
-          style: const TextStyle(
-            fontFamily:  'Inter',
+          style: GoogleFonts.inter(
+            textStyle: const TextStyle(
             color: Color.fromRGBO(26, 26, 26, 1),
             fontSize: 17.0, // Optional: Change the font size
+          ),
           ),
           textAlign: TextAlign.center,
         ),
