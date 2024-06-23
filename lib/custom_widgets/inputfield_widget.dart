@@ -8,14 +8,13 @@ class inputfield_widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      // style: const TextStyle(color:Color.fromRGBO(0, 0, 0, 1)),
-      decoration: InputDecoration(
+       decoration: InputDecoration(
         isDense: true,
         filled: true,
         fillColor: bgcolor,
         border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: Color.fromRGBO(140, 138, 138,1),width: 1),
+            borderSide: const BorderSide(color: Color.fromRGBO(100, 100, 100, 1),width: 1),
         ),
         hintText: hintText,
         hintStyle:GoogleFonts.inter

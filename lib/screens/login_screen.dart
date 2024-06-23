@@ -18,8 +18,8 @@ class _Login_screenState extends State<Login_screen> {
   final String login='Login';
   final String mail='E-mail';
   final String pass="Password";
-  final String text1="Don't have an account? ";
-  final String text2=" Sign Up!";
+  final String text1="Don't have an account?";
+  final String text2="Sign Up!";
   final String text3="Continue as Guest";
   @override
   Widget build(BuildContext context)
@@ -28,6 +28,7 @@ class _Login_screenState extends State<Login_screen> {
       body:  Center(
         child: Padding(
           padding:const  EdgeInsets.only(left:32,right:32),
+        child:SingleChildScrollView(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -67,7 +68,7 @@ class _Login_screenState extends State<Login_screen> {
                divider(),
 
               // button 2(guest button)
-              const SizedBox(height: 20),
+              const SizedBox(height: 19),
                 Guest(()
                 {
                 print('Continue as guest button pressed!');
@@ -76,7 +77,7 @@ class _Login_screenState extends State<Login_screen> {
                 ),
 
               // to show and print text of sign up and account
-              Container(height: 25),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -84,7 +85,7 @@ class _Login_screenState extends State<Login_screen> {
                 text1,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.inter(
-                    fontSize:17,
+                    fontSize:16,
                     color: CustomColors.greyColor2,
                     fontWeight:FontWeight.w400
                 ),
@@ -97,7 +98,7 @@ class _Login_screenState extends State<Login_screen> {
                  text2,
                   textAlign: TextAlign.center,
                   style:  GoogleFonts.inter(
-                    fontSize:17,
+                    fontSize:16,
                     color: CustomColors.blueColor1,
                     fontWeight:FontWeight.w700
                   ),
@@ -106,6 +107,7 @@ class _Login_screenState extends State<Login_screen> {
             ],
                  ),
             ],
+        ),
         ),
       ),
       ),
